@@ -1,92 +1,122 @@
 <!DOCTYPE html>
-<html lang="en-us">
+<html>
   <head>
-    <meta charset="UTF-8">
-    <title>Automosaic by srinivasans</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
     <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
-  </head>
-  <body>
-    <section class="page-header">
-      <h1 class="project-name">Automosaic</h1>
-      <h2 class="project-tagline">Automated Mosaicing of Torn Paper Documents</h2>
-      <a href="https://github.com/srinivasans/AutoMosaic" class="btn">View on GitHub</a>
-      <a href="https://github.com/srinivasans/AutoMosaic/zipball/master" class="btn">Download .zip</a>
-      <a href="https://github.com/srinivasans/AutoMosaic/tarball/master" class="btn">Download .tar.gz</a>
-    </section>
+    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
 
-    <section class="main-content">
-      <h3>
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <title>Automosaic by srinivasans</title>
+  </head>
+
+  <body>
+    <header>
+      <div class="inner">
+        <h1>Automosaic</h1>
+        <h2>Automated Mosaicing of Torn Paper Documents</h2>
+        <a href="https://github.com/srinivasans/AutoMosaic" class="button"><small>View project on</small> GitHub</a>
+      </div>
+    </header>
+
+    <div id="content-wrapper">
+      <div class="inner clearfix">
+        <section id="main-content">
+          <h3>
 <a id="mosaicing-of-torn-paper-documents" class="anchor" href="#mosaicing-of-torn-paper-documents" aria-hidden="true"><span class="octicon octicon-link"></span></a>Mosaicing of Torn paper documents</h3>
 
 <p><img src="https://raw.githubusercontent.com/srinivasans/AutoMosaic/master/sample.jpg" alt="AutoMosaic Sample Result"></p>
 
-<p>Recovery of ripped-up documents is a problem that springs up in Archival study and Investigation science.
-Ecient and successful joining of torn pieces of papers to reconstruct the original documents is an important and
-challenging issue which if automated would alleviate the manual eort, which is dicult and time-consuming.
-This paper focuses on the reconstruction of documents ripped up by hand.</p>
+<p>Recovery of ripped-up documents is a problem that springs up in Archival study and Investigation science. Efficient and successful joining of torn pieces of papers to reconstruct the original documents is an important and challenging issue which if automated would alleviate the manual effort, which is difficult and time-consuming. This paper focuses on the reconstruction of documents ripped up by hand.</p>
 
-<p>Document reconstruction problems can be solved in two steps, nding an initial set of matching fragment pairs
+<p>Document reconstruction problems can be solved in two steps, finding an initial set of matching fragment pairs
 as candidate matches followed by resolving the ambiguity among these candidate matches to reconstruct the
-original document.Document fragments are represented by their contours and candidate matches are obtained by local curve
+original document. Document fragments are represented by their contours and candidate matches are obtained by local curve
 matching of individual fragments. Local curve matching may result in many ambiguous matches and hence a
-search technique is required to resolve the ambiguities for global reconstruction.The best-rst strategy is one such
+search technique is required to resolve the ambiguities for global reconstruction.The best-first strategy is one such
 search technique which selects and merges the best matching pair to form a new fragment. This is repeated until
 there is only one fragment left which gives the recovered document.</p>
 
 <p>Since document fragments often have similar contour segments in real applications, invalid matching occurs
 frequently using the local search strategies. Intensive backtracking in such cases makes these local search techniques
-inecient. To overcome this, we resort to a global approach to disambiguate the candidate matches. The global consistency approach is based on the fact although some incorrect matches may score higher than the correct one locally, the global score of the correct conguration will be much higher than that of an invalid one. A globally consistent solution is found by exploiting the relationships among all candidate matches.</p>
+inefficient. To overcome this, we resort to a global approach to disambiguate the candidate matches. The global consistency approach is based on the fact although some incorrect matches may score higher than the correct one locally, the global score of the correct configuration will be much higher than that of an invalid one. A globally consistent solution is found by exploiting the relationships among all candidate matches.</p>
 
 <h3>
-<a id="designer-templates" class="anchor" href="#designer-templates" aria-hidden="true"><span class="octicon octicon-link"></span></a>Designer Templates</h3>
+<a id="approach" class="anchor" href="#approach" aria-hidden="true"><span class="octicon octicon-link"></span></a>Approach</h3>
 
-<p>We’ve crafted some handsome templates for you to use. Go ahead and click 'Continue to layouts' to browse through them. You can easily go back to edit your page before publishing. After publishing your page, you can revisit the page generator and switch to another theme. Your Page content will be preserved.</p>
+<p>This approach uses Dynamic programming methodology to solve the problem of matching contours. To know about the approach in detail <a href="https://github.com/srinivasans/AutoMosaic/raw/master/Approach.pdf">read here</a>. For details about the implementation of GUI and dependencies <a href="https://github.com/srinivasans/AutoMosaic/raw/master/Report.pdf">read here</a>.</p>
 
 <h3>
-<a id="creating-pages-manually" class="anchor" href="#creating-pages-manually" aria-hidden="true"><span class="octicon octicon-link"></span></a>Creating pages manually</h3>
+<a id="successful-merge-results" class="anchor" href="#successful-merge-results" aria-hidden="true"><span class="octicon octicon-link"></span></a>Successful Merge results</h3>
 
-<p>If you prefer to not use the automatic generator, push a branch named <code>gh-pages</code> to your repository to create a page manually. In addition to supporting regular HTML content, GitHub Pages support Jekyll, a simple, blog aware static site generator. Jekyll makes it easy to create site-wide headers and footers without having to copy them across every page. It also offers intelligent blog support and other advanced templating features.</p>
+<p><img src="https://github.com/srinivasans/AutoMosaic/raw/master/TESTS/4%20images/result.png" alt="Successful Merge">
+<img src="https://github.com/srinivasans/AutoMosaic/raw/master/TESTS/7%20images/result.png" alt="Successful merge"></p>
 
 <h3>
 <a id="authors-and-contributors" class="anchor" href="#authors-and-contributors" aria-hidden="true"><span class="octicon octicon-link"></span></a>Authors and Contributors</h3>
 
-<p>Automosaic was created by <a href="https://github.com/srinivasans" class="user-mention">@srinivasans</a> <a href="https://github.com/raltgz" class="user-mention">@raltgz</a> <a href="https://github.com/ma08" class="user-mention">@ma08</a> @
-This project was placed 3rd (Bronze winning) in Inter hall OpenSoft contest 2014 conducted by <a href="www.gymkhana.iitkgp.ernet.in/">Technology Students Gymkhana</a>, <a href="http://iitkgp.ac.in">Indian Institute of Technology, Kharagpur</a>.</p>
+<p>Automosaic was created by <a href="https://github.com/srinivasans" class="user-mention">@srinivasans</a> <a href="https://github.com/raltgz" class="user-mention">@raltgz</a> <a href="https://github.com/ma08" class="user-mention">@ma08</a></p>
+
+<p>This project was placed 3rd (Bronze winning) in Inter hall OpenSoft contest 2014 conducted by <a href="www.gymkhana.iitkgp.ernet.in/">Technology Students Gymkhana</a>, <a href="http://iitkgp.ac.in">Indian Institute of Technology, Kharagpur</a>.</p>
 
 <h3>
 <a id="support-or-contact" class="anchor" href="#support-or-contact" aria-hidden="true"><span class="octicon octicon-link"></span></a>Support or Contact</h3>
 
-<p>Having trouble with AutoMosaic ? Check out our <a href="user%20manual">https://github.com/srinivasans/AutoMosaic/raw/master/Usermanual.pdf</a> or <a href="mailto:%20srinivasan.iitkgp@gmail.com">contact us</a> and we’ll help you sort it out.</p>
+<p>Having trouble with AutoMosaic ? Check out our <a href="https://github.com/srinivasans/AutoMosaic/raw/master/Usermanual.pdf">user manual</a> or <a href="mailto:%20srinivasan.iitkgp@gmail.com">contact us</a> and we’ll help you sort it out.</p>
 
 <h3>
 <a id="references" class="anchor" href="#references" aria-hidden="true"><span class="octicon octicon-link"></span></a>References</h3>
 
-<p>*[1]Biswas, P. Bhowmick, and B. B. Bhattacharya, Reconstruction of Torn Documents Using Contour Maps, In
-Proc. ICIP 2005, III:517-520.
-*[2] L Zhu, Z Zhou and D Hu, Globally Consistent Reconstruction of Ripped-Up Documents, IEEE Transactions
-on Pattern Analysis and Machine Intelligence, Volume 30 , Issue 1 (January 2008)
-*[3] P. Faber, A Theoretical Framework for Relaxation Processes in Pattern Recognition: Application to Robust
-Nonparametric Contour Generalization, IEEE Trans. Pattern Analysis and Machine
-*[4]C. Solana, E. Justino, L.S. Oliveira, and F. Bortolozzi, Document Reconstruction Based on Feature Matching,
-Proc. 18th Brazilian Symp. Computer Graphics and Image Processing, pp. 163-170, 2005
-*[5]J. McBride and B.B. Kimia, Archaeological Fragment Reassembly Using Curve-Matching, Proc. IEEE Conf.
-Computer Vision and Pattern Recognition, pp. 1-8, 2003.
-*[6] O. Faugeras and M. Berth, Improving Consistency and Reducing Ambiguity in Stochastic Labeling: An
+<ul>
+<li>[1]Biswas, P. Bhowmick, and B. B. Bhattacharya, Reconstruction of Torn Documents Using Contour Maps, In
+Proc. ICIP 2005, III:517-520.</li>
+<li>[2] L Zhu, Z Zhou and D Hu, Globally Consistent Reconstruction of Ripped-Up Documents, IEEE Transactions
+on Pattern Analysis and Machine Intelligence, Volume 30 , Issue 1 (January 2008)</li>
+<li>[3] P. Faber, A Theoretical Framework for Relaxation Processes in Pattern Recognition: Application to Robust
+Nonparametric Contour Generalization, IEEE Trans. Pattern Analysis and Machine</li>
+<li>[4]C. Solana, E. Justino, L.S. Oliveira, and F. Bortolozzi, Document Reconstruction Based on Feature Matching,
+Proc. 18th Brazilian Symp. Computer Graphics and Image Processing, pp. 163-170, 2005</li>
+<li>[5]J. McBride and B.B. Kimia, Archaeological Fragment Reassembly Using Curve-Matching, Proc. IEEE Conf.
+Computer Vision and Pattern Recognition, pp. 1-8, 2003.</li>
+<li>[6] O. Faugeras and M. Berth, Improving Consistency and Reducing Ambiguity in Stochastic Labeling: An
 Optimization Approach, IEEE Trans. Pattern Analysis and Machine Intelligence, vol. 3, no. 4, pp. 412-424,
-1981.Intelligence, vol. 25, no. 8, pp. 1021-1027, Aug. 2003.</p>
+1981.Intelligence, vol. 25, no. 8, pp. 1021-1027, Aug. 2003.</li>
+</ul>
+        </section>
 
-      <footer class="site-footer">
-        <span class="site-footer-owner"><a href="https://github.com/srinivasans/AutoMosaic">Automosaic</a> is maintained by <a href="https://github.com/srinivasans">srinivasans</a>.</span>
+        <aside id="sidebar">
+          <a href="https://github.com/srinivasans/AutoMosaic/zipball/master" class="button">
+            <small>Download</small>
+            .zip file
+          </a>
+          <a href="https://github.com/srinivasans/AutoMosaic/tarball/master" class="button">
+            <small>Download</small>
+            .tar.gz file
+          </a>
 
-        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
-      </footer>
+          <p class="repo-owner"><a href="https://github.com/srinivasans/AutoMosaic"></a> is maintained by <a href="https://github.com/srinivasans">srinivasans</a>.</p>
 
-    </section>
+          <p>This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the Architect theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.</p>
+        </aside>
+      </div>
+    </div>
 
-  
+            <script type="text/javascript">
+            var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+            document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+          </script>
+          <script type="text/javascript">
+            try {
+              var pageTracker = _gat._getTracker("UA-66572927-1");
+            pageTracker._trackPageview();
+            } catch(err) {}
+          </script>
+
   </body>
 </html>
