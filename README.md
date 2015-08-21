@@ -1,5 +1,6 @@
 # AutoMosaic
 
+<div class="align-justify">
 ![AutoMosaic Sample Result](https://raw.githubusercontent.com/srinivasans/AutoMosaic/master/sample.jpg)
 
 Recovery of ripped-up documents is a problem that springs up in Archival study and Investigation science. Efficient and successful joining of torn pieces of papers to reconstruct the original documents is an important and challenging issue which if automated would alleviate the manual effort, which is difficult and time-consuming. This paper focuses on the reconstruction of documents ripped up by hand.
@@ -11,3 +12,4 @@ Since document fragments often have similar contour segments in real application
 AutoMosaic is an OpenSource implementation of dynamic programming for reconstruction of torn paper documents. 
 
 Visit http://srinivasansivanandan.me/AutoMosaic/ for more details. The source code for the implementation is located in https://github.com/raltgz/OpenSoft14
+</div>
