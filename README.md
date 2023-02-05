@@ -12,4 +12,4 @@ Since document fragments often have similar contour segments in real application
 
 AutoMosaic is an OpenSource implementation of dynamic programming for reconstruction of torn paper documents. 
 
-Visit http://srinivasansivanandan.me/AutoMosaic/ for more details. The source code for the implementation is located in https://github.com/raltgz/OpenSoft14
+Visit https://srinivasans.github.io/AutoMosaic/ for more details. The source code for the implementation is located in https://github.com/raltgz/OpenSoft14
